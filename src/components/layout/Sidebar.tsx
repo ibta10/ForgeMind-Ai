@@ -66,7 +66,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onResetDemo,
 }) => {
   const navContent = (
-    <div className="flex h-full flex-col justify-between overflow-y-auto bg-[#0B0F18] border-r border-slate-800/90 px-3 py-4">
+    <div className="flex h-full flex-col justify-between overflow-y-auto bg-[#0B0F18]/92 backdrop-blur-sm border-r border-slate-800/90 px-3 py-4">
       <div>
         <div className="px-2 pr-8 lg:pr-2 pb-4 border-b border-slate-800/80">
           <a
@@ -182,7 +182,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <>
-      <aside className="hidden lg:block w-64 shrink-0 sticky top-0 h-screen">
+      <aside className="relative z-10 hidden lg:block w-64 shrink-0 sticky top-0 h-screen">
         {navContent}
       </aside>
 

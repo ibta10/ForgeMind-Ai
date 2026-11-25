@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import machinesBackdropImg from './assets/images/industrial_machines_backdrop_1795597406779.jpg';
 import { GuidedDemoBar } from './components/layout/GuidedDemoBar';
 import { NoticeBanner } from './components/layout/NoticeBanner';
 import { Sidebar } from './components/layout/Sidebar';
@@ -309,7 +310,20 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#080B12] text-slate-100 overflow-x-clip">
+    <div className="relative min-h-screen flex bg-[#080B12] text-slate-100 overflow-x-clip">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-0 overflow-hidden select-none"
+      >
+        <img
+          src={machinesBackdropImg}
+          alt=""
+          referrerPolicy="no-referrer"
+          className="h-full w-full object-cover object-center opacity-50"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#080B12]/72 via-[#080B12]/58 to-[#080B12]/84" />
+      </div>
+
       <Sidebar
         activePage={activePage}
         onSelectPage={setActivePage}
@@ -324,7 +338,7 @@ export default function App() {
         onResetDemo={handleResetDemo}
       />
 
-      <div className="flex-1 min-w-0 flex flex-col">
+      <div className="relative z-10 flex-1 min-w-0 flex flex-col">
         <TopBar
           activePage={activePage}
           subset={subset}

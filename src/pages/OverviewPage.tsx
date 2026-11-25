@@ -264,7 +264,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
   return (
     <div className="space-y-10">
       {/* 1. Hero & Engineering Problem Framing */}
-      <section className="rounded-lg border border-slate-800 bg-[#0E131D] overflow-hidden">
+      <section className="rounded-lg border border-slate-800/90 bg-[#0E131D]/88 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
           <div className="lg:col-span-7 p-6 sm:p-8 lg:p-9 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
